@@ -7,12 +7,21 @@
   <meta name="description"
         content="信頼をデザインするWebクリエイター大橋たかひろのポートフォリオサイト。シンプル＆洗練された実績を多数掲載し、ビジネス成果に繋がるWeb制作をご提案します。" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?
+      family=Open+Sans:wght@400;600
+      &family=Montserrat:wght@700
+      &display=swap"
+    rel="stylesheet"
+    />
 </head>
 <body>
   <header class="header">
     <div class="container header-inner">
       <a href="#" class="logo">
-        <img src="images/logo_takahiro.png" alt="Takahiro Oohashi Logo" />
+        <img src="images/logo_takahiro-big.png" alt="Takahiro Oohashi Logo" />
       </a>
       <nav>
         <ul class="nav-list">
@@ -24,7 +33,7 @@
       </nav>
     </div>
   </header>
-
+<main>
   <section class="hero">
     <div class="hero-grid">
       
@@ -45,7 +54,16 @@
     <div class="hero-line"></div>
 
     <div class="hero-content">
-      <h1 class="hero-title">信頼をデザインする</h1>
+      <h1 class="hero-title">
+        <span class="emphasis trust">
+          <span class="emphasis-bg"></span>
+          <span class="emphasis-text">信頼</span>
+        </span>を
+        <span class="emphasis design">
+          <!-- <span class="emphasis-bg"></span> -->
+          <span class="emphasis-text">デザイン</span>
+        </span>する
+      </h1>
 
       <div class="hero-surprise">
         <img src="images/logo_takahiro.png" alt="Takahiro Oohashi Logo" />
@@ -60,7 +78,7 @@
 
 
   </section>
-
+</main>
   <!-- GSAP CDN -->
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <!-- アニメーション設定 -->

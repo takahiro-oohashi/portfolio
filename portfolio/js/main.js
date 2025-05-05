@@ -77,6 +77,18 @@ window.addEventListener("load", () => {
     "+=0.4" 
   )
 
+   // 4) 「信頼」をポップに強調（追加）
+   .fromTo(
+    ".emphasis.trust .emphasis-bg",
+    { scale: 0.8, opacity: 0 },
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 0.5,
+      ease: "back.out(1.7)"
+    },
+    "<"  // サプライズロゴと同タイミング
+  )
  // ←ここにホバー登録をフック！
  .eventCallback("onComplete", () => {
   imgs.forEach(img => {
@@ -99,18 +111,6 @@ window.addEventListener("load", () => {
     });
   });
 
-  const title = document.querySelector(".hero-title");
-  title.style.cursor = "pointer";
-
-  title.addEventListener("mouseenter", () => {
-    gsap.fromTo(title,
-      { scale: 1,   skewX: 0,   rotation: 0 },
-      { scale: 1.5, skewX: 0,  rotation: 0,
-        duration: 0.3, ease: "power4.out",
-        yoyo: true,    repeat: 1
-      }
-    );
-  });
 
 });
 });

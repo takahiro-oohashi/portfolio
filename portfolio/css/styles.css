@@ -145,6 +145,36 @@ body {
   pointer-events: fill;
 }
 
+.emphasis {
+  position: relative;
+  display: inline-block;
+  /* 文字フェードは .hero-title の fromTo で行うので opacity は触らず */
+}
+
+/* 背景マーカー */
+.emphasis-bg {
+  position: absolute;
+  inset: 0;
+  background: #00B4D8;
+  transform: skewX(-10deg) scale(0.8);
+  opacity: 0;
+  border-radius: 2px;
+  z-index: 0;
+}
+
+/* 文字部分 */
+.emphasis-text {
+  position: relative;
+  z-index: 1;
+  /* フェードインは既存 .fromTo(".hero-title") の opacity でOK */
+}
+
+.emphasis.design {
+  display: inline-block;    /* マージン設定を効かせる */
+  margin-left: -0.25em;      /* 右側の「を」との空きを 0.1em 分詰める */
+  margin-bottom: -0.08em;
+}
+
 .hero-surprise {
   position: absolute;
   top: 5.8em;                              
